@@ -14,7 +14,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /// usize indicates the number of parts to skip based on their actual paths.
-const QUERIER_ROUTES: [(&str, usize); 35] = [
+const QUERIER_ROUTES: [(&str, usize); 36] = [
     ("config", 0),               // /config (unauthenticated bootstrap)
     ("config", 2),               // /api/{org_id}/config (authenticated full)
     ("summary", 2),              // /api/{org_id}/summary
@@ -51,6 +51,7 @@ const QUERIER_ROUTES: [(&str, usize); 35] = [
                                                * values */
     ("discovery", 2),         // /api/{org_id}/discovery
     ("annotation_queues", 2), // /api/{org_id}/annotation_queues/...
+    ("playground", 2),        // /api/{org_id}/playground/...
     ("service_streams", 2),   // /api/{org_id}/service_streams/...
     ("node/list", 2),         // /api/_meta/node/list
 ];
