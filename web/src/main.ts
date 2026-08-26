@@ -82,6 +82,7 @@ interface ConfigResponse {
 
 const getConfig = async () => {
   await configService.get_config().then((res: ConfigResponse) => {
+    console.log("Config response:", res);
     if (!res.data) return;
 
     // Never clobber the authenticated full config with the bootstrap subset if

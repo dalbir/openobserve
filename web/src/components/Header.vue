@@ -256,7 +256,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <!-- HELP MENU: Contains links to docs, API, and about page -->
           <ODropdown side="bottom" align="end" class="my-hidden">
             <template #trigger>
-              <OButton variant="ghost" size="icon-toolbar" data-test="menu-link-help-item">
+              <OButton class="my-hidden" variant="ghost" size="icon-toolbar" data-test="menu-link-help-item">
                 <OIcon name="help-outline" size="sm" class="size-5!" />
                 <OTooltip side="top" align="center" :content="t('menu.help')" />
               </OButton>

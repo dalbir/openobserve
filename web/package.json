@@ -9,6 +9,7 @@
   },
   "scripts": {
     "dev": "vite --base /web/",
+    "brand-build": "./build-branded.sh --deploy -f deploy/build/Dockerfile",
     "devcloud": "NODE_ENV=devcloud vite --mode=devcloud",
     "build-alpha1": "run-p type-check build-only-alpha1",
     "build-cloud-prod": "run-p type-check build-only-cloud-prod",

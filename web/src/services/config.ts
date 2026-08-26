@@ -15,7 +15,7 @@
 
 import http from "./http";
 
-const zo_config = {
+const zo_config1 = {
   // Unauthenticated bootstrap: only the fields the login page needs.
   get_config: () => {
     return http().get(`/config`);
@@ -24,6 +24,24 @@ const zo_config = {
   get_config_full: (orgIdentifier: string) => {
     return http().get(`/api/${orgIdentifier}/config`);
   },
+};
+
+const overrideConfig = (response: any) => {
+  console.warn("Overriding config to hide self logo for branded build", response);
+  return {
+    ...response,
+    data: {
+      ...response.data,
+      custom_hide_self_logo: true,
+    },
+  };
+};
+
+const zo_config = {
+  get_config: () => http().get("/config").then(overrideConfig),
+
+  get_config_full: (orgIdentifier: string) =>
+    http().get(`/api/${orgIdentifier}/config`).then(overrideConfig),
 };
 
 export default zo_config;
