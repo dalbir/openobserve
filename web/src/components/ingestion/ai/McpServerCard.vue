@@ -484,7 +484,7 @@ const openDocs = () => {
     </div>
 
     <!-- Docs -->
-    <div v-if="safeDocUrl">
+    <div v-if="safeDocUrl" class="my-hidden">
       <OButton
         variant="outline"
         size="sm-action"

@@ -186,6 +186,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
               : 'primary'
           "
           size="xs"
+          class="my-hidden"
           data-test="upgrade-to-enterprise-btn"
           @click="openEnterpriseDialog"
         >
@@ -242,6 +243,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
           <!-- SLACK COMMUNITY LINK -->
           <OButton
+            class="my-hidden"
             variant="ghost"
             size="icon-toolbar"
             data-test="menu-link-slack-item"
@@ -252,7 +254,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           </OButton>
 
           <!-- HELP MENU: Contains links to docs, API, and about page -->
-          <ODropdown side="bottom" align="end">
+          <ODropdown side="bottom" align="end" class="my-hidden">
             <template #trigger>
               <OButton variant="ghost" size="icon-toolbar" data-test="menu-link-help-item">
                 <OIcon name="help-outline" size="sm" class="size-5!" />

@@ -23,6 +23,7 @@ import "./styles/tailwind.css";
 // applied to v-html-highlighted log output across logs/traces/RUM. Loaded once
 // here instead of re-@imported inside each consumer's <style> block.
 import "./assets/styles/log-highlighting.css";
+import "./assets/styles/my-brand.css";
 import config from "./aws-exports";
 import configService from "./services/config";
 

@@ -928,7 +928,7 @@ function fireConfetti() {
       </div>
 
       <!-- Footer -->
-      <div class="pv-foot">
+      <div class="pv-foot my-hidden">
         <OIcon name="open-in-new" size="sm" />
         {{ t("ingestion.setupCard.fullIntegrationDocs") }}&nbsp;
         <a :href="safeHttpUrl(content.docUrl)" target="_blank" rel="noopener noreferrer"
